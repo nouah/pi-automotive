@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>usr/shar/pictures/music.jpg</file>
+        <file>usr/shar/pictures/movie.jpg</file>
+        <file>usr/shar/pictures/wallpaper/15408.jpg</file>
+        <file>usr/shar/pictures/wallpaper/17973903.jpg</file>
+        <file>usr/shar/pictures/bluetooh.png</file>
+        <file>usr/shar/pictures/bluetoohgray.jpg</file>
+        <file>usr/shar/pictures/radio.jpg</file>
+        <file>usr/shar/pictures/alarm.png</file>
+    </qresource>
+</RCC>
