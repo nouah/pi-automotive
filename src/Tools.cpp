@@ -53,41 +53,41 @@ void Tools::listennewusb(Device *D)
 }
 
 //mountage dev/sdX dans /home/usb/
-bool Tools::mountnewusb(QString devpath) {
+//bool Tools::mountnewusb(QString devpath) {
 
-QProcess process1;
-QProcess process2;
+//QProcess process1;
+//QProcess process2;
 
-process1.setStandardOutputProcess(&process2);
+//process1.setStandardOutputProcess(&process2);
 
-process1.start("echo 130478");
-process2.start("sudo -S mount "+devpath+"  /home/usb/");
+//process1.start("echo password");
+//process2.start("sudo -S mount "+devpath+"  /home/usb/");
 
-//process2.start("sudo -S mount "+devpath);
-//process2.start("udisksctl   mount -b "+devpath);
-process2.setProcessChannelMode(QProcess::ForwardedChannels);
+////process2.start("sudo -S mount "+devpath);
+////process2.start("udisksctl   mount -b "+devpath);
+//process2.setProcessChannelMode(QProcess::ForwardedChannels);
 
-// Wait for it to start
-if(!process1.waitForStarted()){
-    qDebug() << "!process1.waitForStarted";
-    return 0;
+//// Wait for it to start
+//if(!process1.waitForStarted()){
+//    qDebug() << "!process1.waitForStarted";
+//    return 0;
 
-}
+//}
 
-bool retval = false;
-QByteArray buffer;
-// To be fair: you only need to wait here for a bit with shutdown,
-// but I will still leave the rest here for a generic solution
-while ((retval = process2.waitForFinished()));
-buffer.append(process2.readAll());
-if (!retval) {
-    qDebug() << "Process 2 error:" << process2.errorString();
-    qDebug() << "Buffer data" << buffer;
-    return 0;
-}
-//qDebug() << "Buffer data" << buffer;
-return 1;
-}
+//bool retval = false;
+//QByteArray buffer;
+//// To be fair: you only need to wait here for a bit with shutdown,
+//// but I will still leave the rest here for a generic solution
+//while ((retval = process2.waitForFinished()));
+//buffer.append(process2.readAll());
+//if (!retval) {
+//    qDebug() << "Process 2 error:" << process2.errorString();
+//    qDebug() << "Buffer data" << buffer;
+//    return 0;
+//}
+////qDebug() << "Buffer data" << buffer;
+//return 1;
+//}
 
 
 void Tools::onmountOut()

@@ -16,7 +16,6 @@ SOURCES += \
 RESOURCES += \
     clock.qrc \
     icons/icons.qrc \
-    imagine-assets/imagine-assets.qrc \
     pictures.qrc \
     qml/qml.qrc
 
