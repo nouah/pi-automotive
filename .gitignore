@@ -55,4 +55,4 @@ compile_commands.json
 *.zip
 *.tar.gz
 *.tar
-usr/bin/
+build/usr/bin/
