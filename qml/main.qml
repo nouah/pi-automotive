@@ -67,8 +67,8 @@ ApplicationWindow {
     }
     FolderListModel {
         id: folderModel
-        //rootFolder:rootdfolder
-        //folder: soundfolder
+         rootFolder:mtools.usbfolder
+         folder: mtools.usbfolder
         showDirs: true
         //showDotAndDotDot:true
 
@@ -77,7 +77,7 @@ ApplicationWindow {
     }
     Connections {
         target: mtools
-        onSendToQml: {
+        onSendusbToQml: {
 
             folderModel.folder = "file://"+mtools.usbfolder; // Set the counter to the text label
             folderModel.rootFolder= "file://"+mtools.usbfolder;
@@ -88,6 +88,8 @@ ApplicationWindow {
 
             folderModel.submit();
         }
+
+
     }
 //////////////
     StatusBar{

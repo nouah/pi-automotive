@@ -28,9 +28,9 @@ OBJECTS_DIR = $${BUILDDIR}
 MOC_DIR = $${BUILDDIR}
 RCC_DIR = $${BUILDDIR}
 UI_DIR = $${BUILDDIR}
-OBJECTS_DIR=$${BUILDDIR}
+OBJECTS_DIR&=$${BUILDDIR}
 INCLUDEPATH +=build
-target.path = usr/bin/
+target.path = /home/pi
 INSTALLS += target
 
 ##DISTFILES += shar/pictures/music.jpg

@@ -14,7 +14,6 @@
         <file>StatusBar.qml</file>
         <file>composonts/BadgeApp.qml</file>
         <file>appshome.qml</file>
-        <file>composonts/CustomLabel.qml</file>
         <file>composonts/PageBackground.qml</file>
         <file>apps/youtube.qml</file>
         <file>apps/AppsLoader.qml</file>

@@ -413,7 +413,7 @@ Item {
             }
             Connections {
                 target: mtools
-                onSendToQml: {
+                onSendusbToQml: {
 
                    // folderModel.folder = usbfolder // Set the counter to the text label
 
@@ -443,7 +443,9 @@ Item {
                         folderModel.folder=folderModel.parentFolder
 
                     }
+
                 }
+
 
             }
             delegate: Component {
@@ -478,11 +480,11 @@ Item {
 
                             console.log("isfolder after folderModel.folder ="+filePath)
                         }else{
-                            console.log("isfile ="+filePath)
-                            listsoundfolder.currentIndex = index
+
+                           listsoundfolder.currentIndex = index
                             playMusic.source = folderModel.get(listsoundfolder.currentIndex , "fileURL")
                             playMusic.play()
-
+                            console.log("isfile ="+filePath)
                         }
                     }
 

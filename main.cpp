@@ -63,9 +63,12 @@ int main(int argc, char *argv[])
      //virtual keyboard
      qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
      qputenv("QT_VIRTUALKEYBOARD_LAYOUT_PATH", QByteArray("qrc:/qml/outils/virtualkeyboard/vkeyboard/layouts"));
-    // qputenv("QT_QPA_EGLFS_HIDECURSOR",QByteArray("1"));
-     //automotive -nomouse -platform eglfs
-     //QT_QPA_EVDEV_TOUCHSCREEN_PARAMETERS=/dev/input/event1:rotate=0
+
+
+     qputenv("QTWEBENGINE_CHROMIUM_FLAGS",QByteArray("-single-process -disable-gpu -no-sandbox  --v=1"));
+     // qputenv("QT_QPA_EGLFS_HIDECURSOR",QByteArray("1"));
+     //automotive --platform eglfs --plugin tslib  -nomouse
+     qputenv("QT_QPA_EVDEV_TOUCHSCREEN_PARAMETERS",QByteArray("/dev/input/event1:rotate=0"));
      //    // QQuickStyle::setStyle("Universal");
      qputenv("QT_QUICK_CONTROLS_STYLE", "Material");
      QQuickStyle::setStyle("Material");
@@ -85,7 +88,7 @@ int main(int argc, char *argv[])
     app.setApplicationVersion("1.0");
     app.setOrganizationName("kovaxia");
     app.setOrganizationDomain("kovaxia.ddns.net");
-    app.setApplicationName("automotive");
+    app.setApplicationName("pi-automotive");
 
      Tools   mtools; // Create the application core with signals and slots
 

@@ -16,6 +16,8 @@ Rectangle {
         x: 124
         y: 15
         text: mtools.usbfolder
+        styleColor: "#ffffff"
+        lineHeight: 0.7
 
     }
 
